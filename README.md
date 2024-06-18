@@ -23,17 +23,11 @@
 ### This project uses Docker and Docker Compose to manage dependencies and environment setup.
 
 ### Build Docker Images:
-
 ### docker-compose build
-### Run Migrations:
-### To apply database migrations, run:
 
-#### docker-compose run web flask db upgrade
 ### Running the Application
 
 ### To start the application, use Docker Compose:
-
-
 #### docker-compose up
 #### This command will start the application and the PostgreSQL database. The API will be available at http://localhost:5000.
 
