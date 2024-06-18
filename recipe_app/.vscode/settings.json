@@ -1,0 +1,13 @@
+{
+    "cSpell.words": [
+        "backref",
+        "blurprint",
+        "checkpw",
+        "gensalt",
+        "hashpw",
+        "ilike",
+        "joinedload",
+        "jsonify",
+        "SQLALCHEMY"
+    ]
+}

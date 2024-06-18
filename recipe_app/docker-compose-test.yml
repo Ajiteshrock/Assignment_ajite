@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: recipes_db
+    ports:
+      - "5432:5432"
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    environment:
+      FLASK_APP: run.py
+      FLASK_ENV: testing
+      DATABASE_URL: postgresql://postgres:password@db:5432/recipes_db
+    depends_on:
+      - db
+    command: ["pytest", "--cov=app", "--cov-report=term-missing", "-v"]
